@@ -1,69 +1,108 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduQueen Vocabulary Search</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>단어 검색 | EduQueen</title>
   <style>
     body {
       font-family: "Pretendard", "Noto Sans KR", sans-serif;
-      background: #faf8ef;
+      background-color: #ffffff;
+      color: #222;
       margin: 0;
       padding: 0;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
     }
+
     h1 {
-      margin-top: 40px;
-      color: #333;
+      margin-top: 60px;
+      font-size: 26px;
+      font-weight: 700;
+      color: #111;
     }
+
     input {
       width: 80%;
-      max-width: 400px;
-      padding: 12px;
-      border-radius: 20px;
+      max-width: 420px;
+      padding: 14px 20px;
+      margin: 25px 0;
       border: 1px solid #ccc;
+      border-radius: 25px;
       font-size: 16px;
-      margin-bottom: 20px;
+      outline: none;
+      transition: all 0.2s ease;
     }
+    input:focus {
+      border-color: #555;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
     .result {
+      width: 90%;
       max-width: 700px;
-      margin: 0 auto;
-      text-align: left;
+      margin-bottom: 40px;
     }
+
     .card {
-      background: #fffef5;
-      border: 1px solid #ddd;
+      background-color: #ffffff;
+      border: 1px solid #eee;
       border-radius: 10px;
-      padding: 12px 18px;
-      margin: 8px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      transition: transform 0.1s ease;
     }
+    .card:hover {
+      transform: scale(1.01);
+    }
+
     .eng {
-      font-weight: 700;
       font-size: 18px;
-      color: #333;
+      font-weight: 700;
+      color: #000;
     }
+
     .kor {
+      font-size: 15px;
       color: #555;
       margin-top: 4px;
+      line-height: 1.4;
     }
+
     .day {
       font-size: 13px;
       color: #888;
+      margin-top: 6px;
+    }
+
+    footer {
+      margin-top: auto;
+      font-size: 13px;
+      color: #aaa;
+      padding: 20px 0;
     }
   </style>
 </head>
 <body>
-  <h1>📚 EduQueen 단어 검색</h1>
+  <h1>📚 EduQueen Vocabulary Search</h1>
   <input type="text" id="searchBox" placeholder="단어나 뜻을 입력하세요 (예: tall / 키가)">
   <div class="result" id="result"></div>
+
+  <footer>© EduQueen English Academy</footer>
 
   <script>
     let data = [];
 
     async function loadData() {
-      const res = await fetch('data.json');
-      data = await res.json();
+      try {
+        const res = await fetch('data.json');
+        data = await res.json();
+      } catch (e) {
+        console.error("⚠️ data.json을 불러올 수 없습니다.", e);
+      }
     }
 
     function searchWords(query) {
@@ -77,11 +116,15 @@
 
     function displayResults(results) {
       const box = document.getElementById('result');
+      if (results.length === 0) {
+        box.innerHTML = "<p style='text-align:center; color:#999;'>검색 결과가 없습니다.</p>";
+        return;
+      }
       box.innerHTML = results.map(r => `
         <div class="card">
           <div class="eng">${r.english}</div>
           <div class="kor">${r.korean}</div>
-          <div class="day">Day ${r.day} • No.${r.no}</div>
+          <div class="day">Day ${r.day} · No.${r.no}</div>
         </div>
       `).join('');
     }
