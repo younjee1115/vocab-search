@@ -1,0 +1,18 @@
+[
+  {
+    "word": "sustain",
+    "meaning": "지속하다",
+    "pos": ["verb"],
+    "tags": ["고1","유의어"],
+    "synonyms": ["maintain","support"],
+    "antonyms": ["end","stop"]
+  },
+  {
+    "word": "conscious",
+    "meaning": "의식적인",
+    "pos": ["adj"],
+    "tags": ["고1","반의어"],
+    "synonyms": ["aware"],
+    "antonyms": ["unaware"]
+  }
+]
