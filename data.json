@@ -1,18 +1,1202 @@
 [
   {
-    "word": "sustain",
-    "meaning": "지속하다",
-    "pos": ["verb"],
-    "tags": ["고1","유의어"],
-    "synonyms": ["maintain","support"],
-    "antonyms": ["end","stop"]
+    "day": 1,
+    "no": 1,
+    "english": "tall",
+    "korean": "키가 큰, 높은"
   },
   {
-    "word": "conscious",
-    "meaning": "의식적인",
-    "pos": ["adj"],
-    "tags": ["고1","반의어"],
-    "synonyms": ["aware"],
-    "antonyms": ["unaware"]
+    "day": 1,
+    "no": 2,
+    "english": "cut",
+    "korean": "베다, 자르다"
+  },
+  {
+    "day": 1,
+    "no": 3,
+    "english": "nice",
+    "korean": "멋진, 좋은, 괜찮은"
+  },
+  {
+    "day": 1,
+    "no": 4,
+    "english": "have",
+    "korean": "가지다, 먹다, 마시다"
+  },
+  {
+    "day": 1,
+    "no": 5,
+    "english": "actor",
+    "korean": "배우"
+  },
+  {
+    "day": 1,
+    "no": 6,
+    "english": "many",
+    "korean": "많은"
+  },
+  {
+    "day": 1,
+    "no": 7,
+    "english": "see",
+    "korean": "보다, 알다, 이해하다"
+  },
+  {
+    "day": 1,
+    "no": 8,
+    "english": "from",
+    "korean": "[장소]~에서(부터); [시각]~부터"
+  },
+  {
+    "day": 1,
+    "no": 9,
+    "english": "what",
+    "korean": "무엇, 어떤 것; 무슨, 어떤"
+  },
+  {
+    "day": 1,
+    "no": 10,
+    "english": "old",
+    "korean": "오래된; 나이 든, 늙은"
+  },
+  {
+    "day": 1,
+    "no": 11,
+    "english": "meet",
+    "korean": "만나다"
+  },
+  {
+    "day": 1,
+    "no": 12,
+    "english": "make",
+    "korean": "만들다"
+  },
+  {
+    "day": 1,
+    "no": 13,
+    "english": "friend",
+    "korean": "친구, 벗"
+  },
+  {
+    "day": 1,
+    "no": 14,
+    "english": "cap",
+    "korean": "(앞에 챙이 달린)모자"
+  },
+  {
+    "day": 1,
+    "no": 15,
+    "english": "large",
+    "korean": "큰, 넓은; 많은"
+  },
+  {
+    "day": 1,
+    "no": 16,
+    "english": "heavy",
+    "korean": "무거운; (양, 정도가)많은, 심한"
+  },
+  {
+    "day": 1,
+    "no": 17,
+    "english": "long",
+    "korean": "(길이, 거리가)긴; (시간이)오랜"
+  },
+  {
+    "day": 1,
+    "no": 18,
+    "english": "school",
+    "korean": "학교"
+  },
+  {
+    "day": 1,
+    "no": 19,
+    "english": "come[be] from",
+    "korean": "~출신이다, ~에서 오다"
+  },
+  {
+    "day": 1,
+    "no": 20,
+    "english": "be going to-v",
+    "korean": "~할 것이다, ~할 예정이다"
+  },
+  {
+    "day": 2,
+    "no": 21,
+    "english": "happy",
+    "korean": "행복한"
+  },
+  {
+    "day": 2,
+    "no": 22,
+    "english": "room",
+    "korean": "방"
+  },
+  {
+    "day": 2,
+    "no": 23,
+    "english": "dance",
+    "korean": "춤추다; 춤, 댄스"
+  },
+  {
+    "day": 2,
+    "no": 24,
+    "english": "fun",
+    "korean": "재미, 즐거움; 재미있는"
+  },
+  {
+    "day": 2,
+    "no": 25,
+    "english": "clean",
+    "korean": "깨끗한; 청소하다"
+  },
+  {
+    "day": 2,
+    "no": 26,
+    "english": "bean",
+    "korean": "콩"
+  },
+  {
+    "day": 2,
+    "no": 27,
+    "english": "light",
+    "korean": "빛; (전깃)불, 전등; 가벼운"
+  },
+  {
+    "day": 2,
+    "no": 28,
+    "english": "for",
+    "korean": "[목적]~을 위해; [시간]~동안"
+  },
+  {
+    "day": 2,
+    "no": 29,
+    "english": "good",
+    "korean": "좋은, 훌륭한; 즐거운, 기쁜"
+  },
+  {
+    "day": 2,
+    "no": 30,
+    "english": "short",
+    "korean": "(길이, 거리가)짧은; 키가 작은"
+  },
+  {
+    "day": 2,
+    "no": 31,
+    "english": "eat",
+    "korean": "먹다"
+  },
+  {
+    "day": 2,
+    "no": 32,
+    "english": "too",
+    "korean": "너무; 또한, 게다가"
+  },
+  {
+    "day": 2,
+    "no": 33,
+    "english": "lunch",
+    "korean": "점심(식사)"
+  },
+  {
+    "day": 2,
+    "no": 34,
+    "english": "wait",
+    "korean": "기다리다"
+  },
+  {
+    "day": 2,
+    "no": 35,
+    "english": "student",
+    "korean": "학생"
+  },
+  {
+    "day": 2,
+    "no": 36,
+    "english": "model",
+    "korean": "모형; 모델"
+  },
+  {
+    "day": 2,
+    "no": 37,
+    "english": "out",
+    "korean": "밖에, 밖으로"
+  },
+  {
+    "day": 2,
+    "no": 38,
+    "english": "young",
+    "korean": "어린, 젊은"
+  },
+  {
+    "day": 2,
+    "no": 39,
+    "english": "go to school",
+    "korean": "학교에 다니다"
+  },
+  {
+    "day": 2,
+    "no": 40,
+    "english": "make friends",
+    "korean": "친구가 되다, 친해지다"
+  },
+  {
+    "day": 3,
+    "no": 41,
+    "english": "all",
+    "korean": "모든; 모두"
+  },
+  {
+    "day": 3,
+    "no": 42,
+    "english": "city",
+    "korean": "도시"
+  },
+  {
+    "day": 3,
+    "no": 43,
+    "english": "day",
+    "korean": "하루, 날; 낮"
+  },
+  {
+    "day": 3,
+    "no": 44,
+    "english": "smart",
+    "korean": "영리한, 똑똑한"
+  },
+  {
+    "day": 3,
+    "no": 45,
+    "english": "look",
+    "korean": "보다; (~하게)보이다"
+  },
+  {
+    "day": 3,
+    "no": 46,
+    "english": "teacher",
+    "korean": "교사, 선생"
+  },
+  {
+    "day": 3,
+    "no": 47,
+    "english": "watch",
+    "korean": "보다; 손목시계"
+  },
+  {
+    "day": 3,
+    "no": 48,
+    "english": "to",
+    "korean": "[방향, 장소]~으로, ~에; [범위]~까지"
+  },
+  {
+    "day": 3,
+    "no": 49,
+    "english": "house",
+    "korean": "집, 주택"
+  },
+  {
+    "day": 3,
+    "no": 50,
+    "english": "hobby",
+    "korean": "취미"
+  },
+  {
+    "day": 3,
+    "no": 51,
+    "english": "like",
+    "korean": "좋아하다; ~처럼, ~와 같이"
+  },
+  {
+    "day": 3,
+    "no": 52,
+    "english": "new",
+    "korean": "새,새로운"
+  },
+  {
+    "day": 3,
+    "no": 53,
+    "english": "ago",
+    "korean": "~전에, 이전에"
+  },
+  {
+    "day": 3,
+    "no": 54,
+    "english": "classmate",
+    "korean": "급우, 반 친구"
+  },
+  {
+    "day": 3,
+    "no": 55,
+    "english": "dancer",
+    "korean": "춤추는 사람, 무용수"
+  },
+  {
+    "day": 3,
+    "no": 56,
+    "english": "dinner",
+    "korean": "저녁(식사)"
+  },
+  {
+    "day": 3,
+    "no": 57,
+    "english": "dirty",
+    "korean": "더러운"
+  },
+  {
+    "day": 3,
+    "no": 58,
+    "english": "study",
+    "korean": "공부(하다); 연구(하다)"
+  },
+  {
+    "day": 3,
+    "no": 59,
+    "english": "have fun",
+    "korean": "즐기다, 재미있게 놀다"
+  },
+  {
+    "day": 3,
+    "no": 60,
+    "english": "eat out",
+    "korean": "외식하다"
+  },
+  {
+    "day": 4,
+    "no": 61,
+    "english": "enter",
+    "korean": "들어가다; 입학하다"
+  },
+  {
+    "day": 4,
+    "no": 62,
+    "english": "body",
+    "korean": "몸, 신체"
+  },
+  {
+    "day": 4,
+    "no": 63,
+    "english": "act",
+    "korean": "행동하다; 행동, 행위"
+  },
+  {
+    "day": 4,
+    "no": 64,
+    "english": "bad",
+    "korean": "나쁜, 불쾌한; 해로운, 안 좋은"
+  },
+  {
+    "day": 4,
+    "no": 65,
+    "english": "classroom",
+    "korean": "교실, 강의실"
+  },
+  {
+    "day": 4,
+    "no": 66,
+    "english": "flower",
+    "korean": "꽃"
+  },
+  {
+    "day": 4,
+    "no": 67,
+    "english": "color",
+    "korean": "색, 색깔"
+  },
+  {
+    "day": 4,
+    "no": 68,
+    "english": "in",
+    "korean": "[장소]~(안)에서; [기간]~(동안)에; [시간]~후에"
+  },
+  {
+    "day": 4,
+    "no": 69,
+    "english": "minute",
+    "korean": "(시간의 단위)분; 잠깐"
+  },
+  {
+    "day": 4,
+    "no": 70,
+    "english": "sand",
+    "korean": "모래"
+  },
+  {
+    "day": 4,
+    "no": 71,
+    "english": "star",
+    "korean": "별; (연예, 스포츠계 등의)스타"
+  },
+  {
+    "day": 4,
+    "no": 72,
+    "english": "wet",
+    "korean": "젖은, 축축한"
+  },
+  {
+    "day": 4,
+    "no": 73,
+    "english": "yesterday",
+    "korean": "어제; 어제"
+  },
+  {
+    "day": 4,
+    "no": 74,
+    "english": "hot",
+    "korean": "뜨거운, 더운; 매운"
+  },
+  {
+    "day": 4,
+    "no": 75,
+    "english": "late",
+    "korean": "늦은, 지각한; 늦게"
+  },
+  {
+    "day": 4,
+    "no": 76,
+    "english": "well",
+    "korean": "잘, 훌륭하게; 건강한"
+  },
+  {
+    "day": 4,
+    "no": 77,
+    "english": "beach",
+    "korean": "해변, 바닷가"
+  },
+  {
+    "day": 4,
+    "no": 78,
+    "english": "who",
+    "korean": "[의문문]누구"
+  },
+  {
+    "day": 4,
+    "no": 79,
+    "english": "look like",
+    "korean": "~처럼 보이다; ~할 것 같다"
+  },
+  {
+    "day": 4,
+    "no": 80,
+    "english": "all day (long)",
+    "korean": "하루 종일"
+  },
+  {
+    "day": 5,
+    "no": 81,
+    "english": "feel",
+    "korean": "(촉감으로)느끼다; (기분, 감정 등이)들다"
+  },
+  {
+    "day": 5,
+    "no": 82,
+    "english": "cold",
+    "korean": "추운, 차가운; 감기"
+  },
+  {
+    "day": 5,
+    "no": 83,
+    "english": "class",
+    "korean": "학급, 반; 수업"
+  },
+  {
+    "day": 5,
+    "no": 84,
+    "english": "sad",
+    "korean": "슬픈"
+  },
+  {
+    "day": 5,
+    "no": 85,
+    "english": "family",
+    "korean": "가족, 가정"
+  },
+  {
+    "day": 5,
+    "no": 86,
+    "english": "really",
+    "korean": "실제로, 진짜로; [강조]아주, 정말로"
+  },
+  {
+    "day": 5,
+    "no": 87,
+    "english": "hour",
+    "korean": "한 시간"
+  },
+  {
+    "day": 5,
+    "no": 88,
+    "english": "at",
+    "korean": "[장소]~에(서); [시간]~에"
+  },
+  {
+    "day": 5,
+    "no": 89,
+    "english": "rain",
+    "korean": "비, 빗물; 비가 오다"
+  },
+  {
+    "day": 5,
+    "no": 90,
+    "english": "dry",
+    "korean": "마른, 건조한; 마르다, 말리다"
+  },
+  {
+    "day": 5,
+    "no": 91,
+    "english": "time",
+    "korean": "시각; 시간; 때, 번"
+  },
+  {
+    "day": 5,
+    "no": 92,
+    "english": "last",
+    "korean": "마지막의; 지난"
+  },
+  {
+    "day": 5,
+    "no": 93,
+    "english": "morning",
+    "korean": "아침, 오전"
+  },
+  {
+    "day": 5,
+    "no": 94,
+    "english": "live",
+    "korean": "살다; 살아있는"
+  },
+  {
+    "day": 5,
+    "no": 95,
+    "english": "movie",
+    "korean": "영화"
+  },
+  {
+    "day": 5,
+    "no": 96,
+    "english": "sour",
+    "korean": "신, 시큼한; (우유 등이)상한"
+  },
+  {
+    "day": 5,
+    "no": 97,
+    "english": "meat",
+    "korean": "고기"
+  },
+  {
+    "day": 5,
+    "no": 98,
+    "english": "lake",
+    "korean": "호수"
+  },
+  {
+    "day": 5,
+    "no": 99,
+    "english": "look for",
+    "korean": "~을 찾다"
+  },
+  {
+    "day": 5,
+    "no": 100,
+    "english": "feel like",
+    "korean": "~을 갖고[하고] 싶다; ~처럼 느끼다"
+  },
+  {
+    "day": 6,
+    "no": 101,
+    "english": "again",
+    "korean": "다시, 또"
+  },
+  {
+    "day": 6,
+    "no": 102,
+    "english": "home",
+    "korean": "집, 가정; 집에, 집으로"
+  },
+  {
+    "day": 6,
+    "no": 103,
+    "english": "kid",
+    "korean": "아이, 어린이"
+  },
+  {
+    "day": 6,
+    "no": 104,
+    "english": "baker",
+    "korean": "제빵사"
+  },
+  {
+    "day": 6,
+    "no": 105,
+    "english": "cool",
+    "korean": "서늘한, 시원한"
+  },
+  {
+    "day": 6,
+    "no": 106,
+    "english": "ready",
+    "korean": "준비가 된"
+  },
+  {
+    "day": 6,
+    "no": 107,
+    "english": "test",
+    "korean": "시험; 검사"
+  },
+  {
+    "day": 6,
+    "no": 108,
+    "english": "with",
+    "korean": "~와 함께; ~로, ~을 이용하여"
+  },
+  {
+    "day": 6,
+    "no": 109,
+    "english": "week",
+    "korean": "주, 일주일"
+  },
+  {
+    "day": 6,
+    "no": 110,
+    "english": "far",
+    "korean": "멀리; 먼"
+  },
+  {
+    "day": 6,
+    "no": 111,
+    "english": "son",
+    "korean": "아들"
+  },
+  {
+    "day": 6,
+    "no": 112,
+    "english": "town",
+    "korean": "(소)도시, 마을"
+  },
+  {
+    "day": 6,
+    "no": 113,
+    "english": "rainy",
+    "korean": "비가 오는"
+  },
+  {
+    "day": 6,
+    "no": 114,
+    "english": "hair",
+    "korean": "머리(카락)"
+  },
+  {
+    "day": 6,
+    "no": 115,
+    "english": "funny",
+    "korean": "우스운, 재미있는"
+  },
+  {
+    "day": 6,
+    "no": 116,
+    "english": "sea",
+    "korean": "바다"
+  },
+  {
+    "day": 6,
+    "no": 117,
+    "english": "night",
+    "korean": "밤, 야간"
+  },
+  {
+    "day": 6,
+    "no": 118,
+    "english": "people",
+    "korean": "사람들; 국민"
+  },
+  {
+    "day": 6,
+    "no": 119,
+    "english": "be good at",
+    "korean": "~을 잘하다"
+  },
+  {
+    "day": 6,
+    "no": 120,
+    "english": "watch out (for)",
+    "korean": "~을 주의하다, ~을 조심하다"
+  },
+  {
+    "day": 7,
+    "no": 121,
+    "english": "say",
+    "korean": "말하다"
+  },
+  {
+    "day": 7,
+    "no": 122,
+    "english": "where",
+    "korean": "[의문문]어디에, 어디로"
+  },
+  {
+    "day": 7,
+    "no": 123,
+    "english": "bakery",
+    "korean": "제과점, 베이커리"
+  },
+  {
+    "day": 7,
+    "no": 124,
+    "english": "word",
+    "korean": "단어, 낱말, 말"
+  },
+  {
+    "day": 7,
+    "no": 125,
+    "english": "thin",
+    "korean": "얇은, 가는; 마른, 야윈"
+  },
+  {
+    "day": 7,
+    "no": 126,
+    "english": "play",
+    "korean": "놀다; 경기하다; 연주하다"
+  },
+  {
+    "day": 7,
+    "no": 127,
+    "english": "child",
+    "korean": "아이, 어린이; 자식, 자녀"
+  },
+  {
+    "day": 7,
+    "no": 128,
+    "english": "after",
+    "korean": "(시간, 순서상)뒤[후]에; ~한 뒤[후]에"
+  },
+  {
+    "day": 7,
+    "no": 129,
+    "english": "start",
+    "korean": "시작하다; 출발하다"
+  },
+  {
+    "day": 7,
+    "no": 130,
+    "english": "dark",
+    "korean": "어두운"
+  },
+  {
+    "day": 7,
+    "no": 131,
+    "english": "read",
+    "korean": "읽다"
+  },
+  {
+    "day": 7,
+    "no": 132,
+    "english": "evening",
+    "korean": "저녁"
+  },
+  {
+    "day": 7,
+    "no": 133,
+    "english": "open",
+    "korean": "열린; 열다"
+  },
+  {
+    "day": 7,
+    "no": 134,
+    "english": "every",
+    "korean": "모든; 매~, ~마다"
+  },
+  {
+    "day": 7,
+    "no": 135,
+    "english": "fill",
+    "korean": "채우다"
+  },
+  {
+    "day": 7,
+    "no": 136,
+    "english": "name",
+    "korean": "이름, 성명"
+  },
+  {
+    "day": 7,
+    "no": 137,
+    "english": "floor",
+    "korean": "(실내의)바닥; (건물의)층"
+  },
+  {
+    "day": 7,
+    "no": 138,
+    "english": "knife",
+    "korean": "칼, 나이프"
+  },
+  {
+    "day": 7,
+    "no": 139,
+    "english": "again and again",
+    "korean": "몇 번이고, 되풀이해서"
+  },
+  {
+    "day": 7,
+    "no": 140,
+    "english": "be happy with",
+    "korean": "~에 기뻐하다, ~에 만족하다"
+  },
+  {
+    "day": 8,
+    "no": 141,
+    "english": "easy",
+    "korean": "쉬운"
+  },
+  {
+    "day": 8,
+    "no": 142,
+    "english": "cute",
+    "korean": "귀여운, 예쁜"
+  },
+  {
+    "day": 8,
+    "no": 143,
+    "english": "know",
+    "korean": "알다, 알고 있다"
+  },
+  {
+    "day": 8,
+    "no": 144,
+    "english": "daughter",
+    "korean": "딸"
+  },
+  {
+    "day": 8,
+    "no": 145,
+    "english": "player",
+    "korean": "(게임, 경기 등의)참가자, 선수; 연주자"
+  },
+  {
+    "day": 8,
+    "no": 146,
+    "english": "window",
+    "korean": "창문; (컴퓨터 화면의)창"
+  },
+  {
+    "day": 8,
+    "no": 147,
+    "english": "close",
+    "korean": "닫다; (거리가)가까운; 친한"
+  },
+  {
+    "day": 8,
+    "no": 148,
+    "english": "of",
+    "korean": "[소속, 소유]~의; [부분]~의, ~중의"
+  },
+  {
+    "day": 8,
+    "no": 149,
+    "english": "cook",
+    "korean": "요리하다; 요리사"
+  },
+  {
+    "day": 8,
+    "no": 150,
+    "english": "then",
+    "korean": "(과거, 미래의)그 당시, 그때; 그 다음에"
+  },
+  {
+    "day": 8,
+    "no": 151,
+    "english": "fat",
+    "korean": "살찐, 뚱뚱한; 지방"
+  },
+  {
+    "day": 8,
+    "no": 152,
+    "english": "snow",
+    "korean": "눈; 눈이 오다"
+  },
+  {
+    "day": 8,
+    "no": 153,
+    "english": "handsome",
+    "korean": "잘생긴"
+  },
+  {
+    "day": 8,
+    "no": 154,
+    "english": "sick",
+    "korean": "아픈, 병든"
+  },
+  {
+    "day": 8,
+    "no": 155,
+    "english": "month",
+    "korean": "달, 월, 개월"
+  },
+  {
+    "day": 8,
+    "no": 156,
+    "english": "walk",
+    "korean": "걷다; 걷기, 산책"
+  },
+  {
+    "day": 8,
+    "no": 157,
+    "english": "rock",
+    "korean": "바위, 돌"
+  },
+  {
+    "day": 8,
+    "no": 158,
+    "english": "next",
+    "korean": "다음의; 다음에(는), 다음으로"
+  },
+  {
+    "day": 8,
+    "no": 159,
+    "english": "after school",
+    "korean": "방과 후에"
+  },
+  {
+    "day": 8,
+    "no": 160,
+    "english": "say hello to",
+    "korean": "~에게 안부를 전하다, ~에게 인사하다"
+  },
+  {
+    "day": 9,
+    "no": 161,
+    "english": "end",
+    "korean": "끝나다, 끝내다; 끝, 마지막"
+  },
+  {
+    "day": 9,
+    "no": 162,
+    "english": "year",
+    "korean": "해, 연; 나이"
+  },
+  {
+    "day": 9,
+    "no": 163,
+    "english": "group",
+    "korean": "무리, 집단"
+  },
+  {
+    "day": 9,
+    "no": 164,
+    "english": "there",
+    "korean": "거기에(서), 그곳으로"
+  },
+  {
+    "day": 9,
+    "no": 165,
+    "english": "afternoon",
+    "korean": "오후"
+  },
+  {
+    "day": 9,
+    "no": 166,
+    "english": "wear",
+    "korean": "입고[신고, 쓰고, 끼고]있다"
+  },
+  {
+    "day": 9,
+    "no": 167,
+    "english": "theater",
+    "korean": "극장"
+  },
+  {
+    "day": 9,
+    "no": 168,
+    "english": "on",
+    "korean": "[장소]~위에; [요일, 날짜]~에"
+  },
+  {
+    "day": 9,
+    "no": 169,
+    "english": "hear",
+    "korean": "들리다, 듣다"
+  },
+  {
+    "day": 9,
+    "no": 170,
+    "english": "story",
+    "korean": "이야기"
+  },
+  {
+    "day": 9,
+    "no": 171,
+    "english": "sound",
+    "korean": "소리, 음성; (~하게)들리다"
+  },
+  {
+    "day": 9,
+    "no": 172,
+    "english": "hungry",
+    "korean": "배고픈"
+  },
+  {
+    "day": 9,
+    "no": 173,
+    "english": "run",
+    "korean": "달리다, 뛰다; 경영하다"
+  },
+  {
+    "day": 9,
+    "no": 174,
+    "english": "kind",
+    "korean": "친절한;종류"
+  },
+  {
+    "day": 9,
+    "no": 175,
+    "english": "round",
+    "korean": "둥근"
+  },
+  {
+    "day": 9,
+    "no": 176,
+    "english": "loud",
+    "korean": "큰 소리의, 시끄러운"
+  },
+  {
+    "day": 9,
+    "no": 177,
+    "english": "push",
+    "korean": "밀다"
+  },
+  {
+    "day": 9,
+    "no": 178,
+    "english": "bright",
+    "korean": "빛나는, 밝은; 영리한"
+  },
+  {
+    "day": 9,
+    "no": 179,
+    "english": "next to",
+    "korean": "~옆에"
+  },
+  {
+    "day": 9,
+    "no": 180,
+    "english": "fill in",
+    "korean": "~을 채우다, 써넣다; ~을 메우다"
+  },
+  {
+    "day": 10,
+    "no": 181,
+    "english": "air",
+    "korean": "공기, 대기; 공중"
+  },
+  {
+    "day": 10,
+    "no": 182,
+    "english": "hard",
+    "korean": "어려운; 단단한, 딱딱한; 열심히"
+  },
+  {
+    "day": 10,
+    "no": 183,
+    "english": "listen",
+    "korean": "듣다"
+  },
+  {
+    "day": 10,
+    "no": 184,
+    "english": "full",
+    "korean": "가득 찬; 배가 부른"
+  },
+  {
+    "day": 10,
+    "no": 185,
+    "english": "music",
+    "korean": "음악"
+  },
+  {
+    "day": 10,
+    "no": 186,
+    "english": "animal",
+    "korean": "동물, 짐승"
+  },
+  {
+    "day": 10,
+    "no": 187,
+    "english": "beautiful",
+    "korean": "아름다운"
+  },
+  {
+    "day": 10,
+    "no": 188,
+    "english": "up",
+    "korean": "위로[에], 위쪽으로; ~위로[에]"
+  },
+  {
+    "day": 10,
+    "no": 189,
+    "english": "weekend",
+    "korean": "주말"
+  },
+  {
+    "day": 10,
+    "no": 190,
+    "english": "sit",
+    "korean": "앉다"
+  },
+  {
+    "day": 10,
+    "no": 191,
+    "english": "put",
+    "korean": "놓다, 두다"
+  },
+  {
+    "day": 10,
+    "no": 192,
+    "english": "warm",
+    "korean": "따뜻한"
+  },
+  {
+    "day": 10,
+    "no": 193,
+    "english": "pull",
+    "korean": "끌다, 잡아당기다"
+  },
+  {
+    "day": 10,
+    "no": 194,
+    "english": "north",
+    "korean": "북쪽; 북쪽의"
+  },
+  {
+    "day": 10,
+    "no": 195,
+    "english": "noise",
+    "korean": "(시끄러운)소리, 소음"
+  },
+  {
+    "day": 10,
+    "no": 196,
+    "english": "door",
+    "korean": "문"
+  },
+  {
+    "day": 10,
+    "no": 197,
+    "english": "size",
+    "korean": "크기, 규모; (옷, 신발 등의)치수, 사이즈"
+  },
+  {
+    "day": 10,
+    "no": 198,
+    "english": "how",
+    "korean": "[의문문]어떻게; 어떤 상태로; 얼마나"
+  },
+  {
+    "day": 10,
+    "no": 199,
+    "english": "go on",
+    "korean": "(어떤 상황이)계속되다"
+  },
+  {
+    "day": 10,
+    "no": 200,
+    "english": "in the end",
+    "korean": "마침내"
   }
 ]
