@@ -1,67 +1,97 @@
-<!doctype html>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>EDQUEEN Vocab Search</title>
-<style>
-  :root { --gap: 12px; }
-  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
-  .wrap { max-width: 760px; margin: 0 auto; }
-  h1 { margin: 0 0 10px; font-size: 22px; }
-  .search { display: flex; gap: var(--gap); }
-  input { flex: 1; padding: 12px 14px; border: 1px solid #ddd; border-radius: 12px; font-size: 16px; }
-  .pill { font-size: 12px; padding: 2px 8px; border: 1px solid #eee; border-radius: 999px; margin-right: 6px; color: #555; }
-  .card { border: 1px solid #eee; border-radius: 14px; padding: 12px 14px; margin-top: 10px; }
-  .muted { color: #666; font-size: 13px; margin-top: 6px; }
-  #count { margin-top: 10px; color: #555; font-size: 13px; }
-</style>
-<div class="wrap">
-  <h1>🔍 EDQUEEN Vocab Search</h1>
-  <div class="search">
-    <input id="q" placeholder="sustain / 의식 / #고1 …" />
-  </div>
-  <div id="count"></div>
-  <div id="list"></div>
-</div>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduQueen Vocabulary Search</title>
+  <style>
+    body {
+      font-family: "Pretendard", "Noto Sans KR", sans-serif;
+      background: #faf8ef;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 40px;
+      color: #333;
+    }
+    input {
+      width: 80%;
+      max-width: 400px;
+      padding: 12px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .result {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .card {
+      background: #fffef5;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 12px 18px;
+      margin: 8px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .eng {
+      font-weight: 700;
+      font-size: 18px;
+      color: #333;
+    }
+    .kor {
+      color: #555;
+      margin-top: 4px;
+    }
+    .day {
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 EduQueen 단어 검색</h1>
+  <input type="text" id="searchBox" placeholder="단어나 뜻을 입력하세요 (예: tall / 키가)">
+  <div class="result" id="result"></div>
 
-<script type="module">
-import Fuse from "https://cdn.skypack.dev/fuse.js@6";
+  <script>
+    let data = [];
 
-const data = await fetch("./data.json").then(r => r.json());
-const fuse = new Fuse(data, {
-  includeScore: false,
-  threshold: 0.3,
-  ignoreLocation: true,
-  minMatchCharLength: 2,
-  keys: ["word", "meaning", "synonyms", "antonyms", "tags"]
-});
+    async function loadData() {
+      const res = await fetch('vocab_day1-10.json');
+      data = await res.json();
+    }
 
-const q = document.getElementById("q");
-const list = document.getElementById("list");
-const count = document.getElementById("count");
+    function searchWords(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) return [];
+      return data.filter(item =>
+        item.english.toLowerCase().includes(q) ||
+        item.korean.includes(q)
+      );
+    }
 
-function render(items){
-  const arr = items[0]?.item ? items.map(x => x.item) : items;
-  count.textContent = `${arr.length} results`;
-  list.innerHTML = arr.slice(0,100).map(v => `
-    <div class="card">
-      <div><strong>${v.word||""}</strong> ${(v.pos||[]).map(p=>`<span class="pill">${p}</span>`).join("")}</div>
-      <div>${v.meaning||""}</div>
-      <div class="muted">
-        ${v.synonyms?.length ? `syn: ${v.synonyms.join(", ")}` : ""}
-        ${v.antonyms?.length ? ` &nbsp; ant: ${v.antonyms.join(", ")}` : ""}
-      </div>
-      <div style="margin-top:6px;">${(v.tags||[]).map(t=>`<span class="pill">${t}</span>`).join("")}</div>
-    </div>
-  `).join("");
-}
-render(data); // 초기 전체 목록
+    function displayResults(results) {
+      const box = document.getElementById('result');
+      box.innerHTML = results.map(r => `
+        <div class="card">
+          <div class="eng">${r.english}</div>
+          <div class="kor">${r.korean}</div>
+          <div class="day">Day ${r.day} • No.${r.no}</div>
+        </div>
+      `).join('');
+    }
 
-let t;
-q.addEventListener("input", e => {
-  clearTimeout(t);
-  t = setTimeout(() => {
-    const s = e.target.value.trim();
-    render(s ? fuse.search(s) : data);
-  }, 150);
-});
-</script>
+    document.getElementById('searchBox').addEventListener('input', e => {
+      const results = searchWords(e.target.value);
+      displayResults(results);
+    });
+
+    loadData();
+  </script>
+</body>
+</html>
