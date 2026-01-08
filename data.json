@@ -1,10 +1,10 @@
 [
   {
-    "level": "입문",
     "day": 1,
     "no": 1,
     "english": "tall",
-    "korean": "키가 큰, 높은"
+    "korean": "키가 큰, 높은",
+    "level": "입문"
   },
   {
     "day": 1,
