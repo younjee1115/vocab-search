@@ -84,6 +84,27 @@
       color: #aaa;
       padding: 20px 0;
     }
+
+    .level-badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;          /* 동그라미 크기 */
+  height: 44px;
+  border-radius: 999px; /* 완전 원 */
+  color: #fff;          /* 하얀 글씨 */
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* 레벨별 색상 */
+.lv-intro { background: #18a957; }        /* 입문: 초록 */
+.lv-basic { background: #2b6fff; }        /* 기초: 파랑 */
+.lv-intermediate { background: #ff9f1a; } /* 중급: 주황 */
+.lv-advanced { background: #e53935; }     /* 고급: 빨강 */
+.lv-unknown { background: #bdbdbd; }      /* 없음/기타: 회색 */
+
   </style>
 </head>
 <body>
@@ -114,6 +135,16 @@
       );
     }
 
+  function levelClass(level) {
+  const v = (level ?? "").trim();
+  if (v === "입문") return "lv-intro";
+  if (v === "기초") return "lv-basic";
+  if (v === "중급") return "lv-intermediate";
+  if (v === "고급") return "lv-advanced";
+  return "lv-unknown";
+}
+
+
     function displayResults(results) {
       const box = document.getElementById('result');
       if (results.length === 0) {
@@ -125,7 +156,7 @@
           <div class="eng">${r.english}</div>
           <div class="kor">${r.korean}</div>
           <div class="day">Day ${r.day} · No.${r.no}</div>
-          <div class="level">Level: ${r.level ?? "—"}</div>
+          <div class="level-badge ${levelClass(r.level)}">${r.level ?? "—"}</div>
         </div>
       `).join('');
     }
