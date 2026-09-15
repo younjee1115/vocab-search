@@ -11,12 +11,14 @@
     "no": 2,
     "english": "cut",
     "korean": "베다, 자르다"
+    "level": "입문"
   },
   {
     "day": 1,
     "no": 3,
     "english": "nice",
     "korean": "멋진, 좋은, 괜찮은"
+    "level": "입문"
   },
   {
     "day": 1,
@@ -35,6 +37,7 @@
     "no": 6,
     "english": "many",
     "korean": "많은"
+    "level": "입문"
   },
   {
     "day": 1,
