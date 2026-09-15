@@ -97,11 +97,15 @@
 
 
 /* 레벨별 색상 */
-.lv-intro { background: #18a957; }        /* 입문: 초록 */
-.lv-basic { background: #2b6fff; }        /* 기초: 파랑 */
-.lv-intermediate { background: #ff9f1a; } /* 중급: 주황 */
-.lv-advanced { background: #e53935; }     /* 고급: 빨강 */
-.lv-unknown { background: #bdbdbd; }      /* 없음/기타: 회색 */
+.lv-intro { background: #18a957; }          /* 입문: 초록 */
+.lv-basic { background: #2b6fff; }          /* 기초: 파랑 */
+.lv-intermediate { background: #ff9f1a; }   /* 중급: 주황 */
+.lv-advanced { background: #e53935; }       /* 고급: 빨강 */
+.lv-gibon { background: #00acc1; }          /* 기본: 청록 */
+.lv-silryeok { background: #8e24aa; }       /* 실력: 보라 */
+.lv-jung-gibon { background: #3949ab; }     /* 중등기본: 남색 */
+.lv-jung-pilsu { background: #d81b60; }     /* 중등필수: 분홍 */
+.lv-unknown { background: #bdbdbd; }        /* 없음/기타: 회색 */
 
   </style>
 </head>
@@ -139,6 +143,10 @@
   if (v === "기초") return "lv-basic";
   if (v === "중급") return "lv-intermediate";
   if (v === "고급") return "lv-advanced";
+  if (v === "기본") return "lv-gibon";
+  if (v === "실력") return "lv-silryeok";
+  if (v === "중등기본") return "lv-jung-gibon";
+  if (v === "중등필수") return "lv-jung-pilsu";
   return "lv-unknown";
 }
 
