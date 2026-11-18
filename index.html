@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>단어 검색 | 에듀퀸영어 숙제</title>
+
   <style>
     body {
       font-family: "Pretendard", "Noto Sans KR", sans-serif;
-      background-color: #ffffff;
+      background: #fff;
       color: #222;
       margin: 0;
-      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -18,26 +18,40 @@
     }
 
     h1 {
-      margin-top: 60px;
+      margin: 60px 0 24px;
+      padding: 0 12px;
       font-size: 26px;
-      font-weight: 700;
       color: #111;
+      text-align: center;
+    }
+
+    .search-controls {
+      width: 90%;
+      max-width: 460px;
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    input,
+    select {
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      padding: 12px 14px;
+      background: #fff;
+      color: #222;
+      font: inherit;
+      font-size: 16px;
     }
 
     input {
-      width: 80%;
-      max-width: 420px;
-      padding: 14px 20px;
-      margin: 25px 0;
-      border: 1px solid #ccc;
-      border-radius: 25px;
-      font-size: 16px;
-      outline: none;
-      transition: all 0.2s ease;
+      flex: 1;
+      min-width: 0;
     }
-    input:focus {
-      border-color: #555;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+
+    select {
+      max-width: 42%;
     }
 
     .result {
@@ -47,132 +61,179 @@
     }
 
     .card {
-      background-color: #ffffff;
       border: 1px solid #eee;
       border-radius: 10px;
       padding: 14px 18px;
       margin-bottom: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-      transition: transform 0.1s ease;
-    }
-    .card:hover {
-      transform: scale(1.01);
     }
 
-    .eng {
-      font-size: 18px;
-      font-weight: 700;
-      color: #000;
+    .eng { font-size: 18px; font-weight: 700; color: #000; }
+    .kor { font-size: 15px; color: #555; margin-top: 4px; line-height: 1.4; }
+    .day { font-size: 13px; color: #888; margin-top: 6px; }
+
+    .level-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
     }
 
-    .kor {
-      font-size: 15px;
-      color: #555;
-      margin-top: 4px;
-      line-height: 1.4;
-    }
+    .lv-intro { background: #18a957; }
+    .lv-basic { background: #2b6fff; }
+    .lv-intermediate { background: #ff9f1a; }
+    .lv-advanced { background: #e53935; }
+    .lv-gibon { background: #00acc1; }
+    .lv-silryeok { background: #8e24aa; }
+    .lv-jung-gibon { background: #4a90e2; }
+    .lv-jung-pilsu { background: #d8a7d0; color: #4a2545; }
+    .lv-jung-godanido { background: #f5e08a; color: #5c4a00; }
+    .lv-sight { background: #137d70; }
+    .lv-unknown { background: #bdbdbd; color: #222; }
 
-    .day {
-      font-size: 13px;
-      color: #888;
-      margin-top: 6px;
-    }
+    .message { text-align: center; color: #666; }
 
     footer {
       margin-top: auto;
+      padding: 20px 0;
       font-size: 13px;
       color: #aaa;
-      padding: 20px 0;
     }
-
-.level-badge{
-  display: inline-block;
-  padding: 2px 8px;      /* 작게 */
-  border-radius: 999px;  /* pill */
-  font-size: 12px;       /* 글씨 높이에 맞게 */
-  font-weight: 600;
-  line-height: 1.2;
-  color: #fff;
-}
-
-
-/* 레벨별 색상 */
-.lv-intro { background: #18a957; }          /* 입문: 초록 */
-.lv-basic { background: #2b6fff; }          /* 기초: 파랑 */
-.lv-intermediate { background: #ff9f1a; }   /* 중급: 주황 */
-.lv-advanced { background: #e53935; }       /* 고급: 빨강 */
-.lv-gibon { background: #00acc1; }          /* 기본: 청록 */
-.lv-silryeok { background: #8e24aa; }       /* 실력: 보라 */
-.lv-jung-gibon { background: #4a90e2; }     /* 중등기본: 파란색 */
-.lv-jung-pilsu { background: #d8a7d0; }     /* 중등필수: 연한 보라핑크 */
-.lv-jung-godanido { background: #f5e08a; color: #5c4a00; }  /* 중등고난도: 연한 노란색 */
-.lv-unknown { background: #bdbdbd; }        /* 없음/기타: 회색 */
-
   </style>
 </head>
 <body>
   <h1>📚 EduQueen Vocabulary Search</h1>
-  <input type="text" id="searchBox" placeholder="단어나 뜻을 입력하세요 (예: tall / 키가)">
-  <div class="result" id="result"></div>
 
+  <div class="search-controls">
+    <select id="levelFilter" aria-label="검색 레벨">
+      <option value="">전체 레벨</option>
+    </select>
+    <input
+      type="text"
+      id="searchBox"
+      aria-label="단어 또는 뜻 검색"
+      placeholder="영어 단어 또는 뜻"
+    />
+  </div>
+
+  <div class="result" id="result"></div>
   <footer>© EduQueen English Academy</footer>
 
   <script>
+    const searchBox = document.getElementById("searchBox");
+    const levelFilter = document.getElementById("levelFilter");
+    const resultBox = document.getElementById("result");
+
+    const levelClasses = new Map([
+      ["입문", "lv-intro"],
+      ["기초", "lv-basic"],
+      ["중급", "lv-intermediate"],
+      ["고급", "lv-advanced"],
+      ["기본", "lv-gibon"],
+      ["실력", "lv-silryeok"],
+      ["중등기본", "lv-jung-gibon"],
+      ["중등필수", "lv-jung-pilsu"],
+      ["중등고난도", "lv-jung-godanido"],
+      ["사이트워드", "lv-sight"]
+    ]);
+
     let data = [];
+
+    function normalizeLevel(level) {
+      return (level ?? "").trim();
+    }
+
+    function searchWords(query, selectedLevel) {
+      const input = query.trim().toLowerCase();
+      const quoted = input.length >= 2 &&
+        input.startsWith('"') && input.endsWith('"');
+      const keyword = quoted ? input.slice(1, -1).trim() : input;
+      if (!keyword) return [];
+
+      const exactMatch = quoted || /^[a-z]$/.test(keyword);
+
+      return data.filter(item => {
+        if (selectedLevel && normalizeLevel(item.level) !== selectedLevel) {
+          return false;
+        }
+
+        const english = item.english.trim().toLowerCase();
+        if (exactMatch) return english === keyword;
+
+        return english.includes(keyword) ||
+          item.korean.toLowerCase().includes(keyword);
+      });
+    }
+
+    function showMessage(text) {
+      const message = document.createElement("p");
+      message.className = "message";
+      message.textContent = text;
+      resultBox.replaceChildren(message);
+    }
+
+    function updateResults() {
+      if (!searchBox.value.trim()) {
+        resultBox.replaceChildren();
+        return;
+      }
+
+      const results = searchWords(searchBox.value, levelFilter.value);
+      if (results.length === 0) {
+        showMessage("검색 결과가 없습니다.");
+        return;
+      }
+
+      const cards = document.createDocumentFragment();
+
+      for (const item of results) {
+        const level = normalizeLevel(item.level);
+        const badgeClass = levelClasses.get(level) ?? "lv-unknown";
+        const card = document.createElement("div");
+        card.className = "card";
+
+        for (const [className, text] of [
+          ["eng", item.english],
+          ["kor", item.korean],
+          ["day", `Day ${item.day} · No.${item.no}`],
+          [`level-badge ${badgeClass}`, level || "—"]
+        ]) {
+          const field = document.createElement("div");
+          field.className = className;
+          field.textContent = text;
+          card.append(field);
+        }
+
+        cards.append(card);
+      }
+
+      resultBox.replaceChildren(cards);
+    }
 
     async function loadData() {
       try {
-        const res = await fetch('data.json');
-        data = await res.json();
-      } catch (e) {
-        console.error("⚠️ data.json을 불러올 수 없습니다.", e);
+        const response = await fetch("data.json");
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        data = await response.json();
+        const levels = new Set(
+          data.map(item => normalizeLevel(item.level)).filter(Boolean)
+        );
+
+        for (const level of levels) {
+          levelFilter.add(new Option(level, level));
+        }
+
+        searchBox.addEventListener("input", updateResults);
+        levelFilter.addEventListener("change", updateResults);
+        updateResults();
+      } catch (error) {
+        console.error("data.json을 불러올 수 없습니다.", error);
+        showMessage("단어 목록을 불러오지 못했습니다.");
       }
     }
-
-    function searchWords(query) {
-      const q = query.trim().toLowerCase();
-      if (!q) return [];
-      return data.filter(item =>
-        item.english.toLowerCase().includes(q) ||
-        item.korean.includes(q)
-      );
-    }
-
-  function levelClass(level) {
-  const v = (level ?? "").trim();
-  if (v === "입문") return "lv-intro";
-  if (v === "기초") return "lv-basic";
-  if (v === "중급") return "lv-intermediate";
-  if (v === "고급") return "lv-advanced";
-  if (v === "기본") return "lv-gibon";
-  if (v === "실력") return "lv-silryeok";
-  if (v === "중등기본") return "lv-jung-gibon";
-  if (v === "중등필수") return "lv-jung-pilsu";
-  if (v === "중등고난도") return "lv-jung-godanido";
-  return "lv-unknown";
-}
-
-
-    function displayResults(results) {
-      const box = document.getElementById('result');
-      if (results.length === 0) {
-        box.innerHTML = "<p style='text-align:center; color:#999;'>검색 결과가 없습니다.</p>";
-        return;
-      }
-      box.innerHTML = results.map(r => `
-        <div class="card">
-          <div class="eng">${r.english}</div>
-          <div class="kor">${r.korean}</div>
-          <div class="day">Day ${r.day} · No.${r.no}</div>
-          <div class="level-badge ${levelClass(r.level)}">${r.level ?? "—"}</div>
-        </div>
-      `).join('');
-    }
-
-    document.getElementById('searchBox').addEventListener('input', e => {
-      const results = searchWords(e.target.value);
-      displayResults(results);
-    });
 
     loadData();
   </script>
